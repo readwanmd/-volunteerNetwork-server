@@ -44,7 +44,7 @@ client.connect(err => {
         const events = req.body;
         eventsCollection.insertOne(events)
         .then(result => {
-            res.send(result.insertedCount)
+            res.status(200).send(result)
         })
     })
 
